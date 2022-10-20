@@ -1,0 +1,26 @@
+AWSTemplateFormatVersion: 2010-09-09
+Metadata:
+  'AWS::CloudFormation::Designer':
+    345b7846-bfec-4f9a-ad08-435c2b8e5465:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 382
+        'y': 176
+      z: 0
+      embeds: []
+Resources:
+  CCR33MBX:
+    Type: 'AWS::Config::ConfigRule'
+    Properties:
+      ConfigRuleName: restricted-ssh
+      Description: >-
+        Checks whether security groups that are in use disallow unrestricted
+        incoming SSH traffic.
+      Source:
+        Owner: AWS
+        SourceIdentifier: INCOMING_SSH_DISABLED
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 345b7846-bfec-4f9a-ad08-435c2b8e5465
